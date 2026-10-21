@@ -1,21 +1,34 @@
 miniMaxSum([1, 3, 5, 7, 9]);
 
-function miniMaxSum(number){
-    let largest = number[0];
-    let smallest = number[0];
+// function miniMaxSum(number){
+//     let largest = number[0];
+//     let smallest = number[0];
+//     let sum = 0;
+
+//     for (let i = 0; i < number.length; i++){
+//         if (number[i] > largest){
+//             largest = number[i];
+//         } else if (number[i] < smallest){
+//             smallest = number[i];
+//         }
+//         sum += number[i];
+//     }
+//         let minSum = sum - largest;
+//         let maxSum = sum - smallest;
+//         console.log(minSum, maxSum);
+// }
+
+function miniMaxSum(arr) {
     let sum = 0;
 
-    for (let i = 0; i < number.length; i++){
-        if (number[i] > largest){
-            largest = number[i];
-        } else if (number[i] < smallest){
-            smallest = number[i];
-        }
-        sum += number[i];
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
-        let minSum = sum - largest;
-        let maxSum = sum - smallest;
-        console.log(minSum, maxSum);
+
+    let min = Math.min(...arr);
+    let max = Math.max(...arr);
+
+    console.log(sum - max, sum - min);
 }
 
 //HackerRank:

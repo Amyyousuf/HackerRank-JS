@@ -1,22 +1,41 @@
 console.log(birthdayCakeCandles([4, 4, 4, 2]));
 
-function birthdayCakeCandles(candles){
-    let tallest = candles[0];
+// function birthdayCakeCandles(candles){
+//     let tallest = candles[0];
+//     //find tallest element
+//     for(let i = 0; i < candles.length; i++)
+//         if (candles[i] > tallest){
+//             tallest = candles[i];
+//         }
+//     let count = 0;
+//     //how many times tallest element occurs
+//     for (let element of candles)
+//         if (element === tallest)
+//             count++;
+    
+//     return{
+//         tallest,
+//         count
+//     } 
+    
+// }
 
-    for(let i = 0; i < candles.length; i++)
-        if (candles[i] > tallest){
-            tallest = candles[i];
-        }
+function birthdayCakeCandles(candles) {
+    let max = Math.max(...candles);
     let count = 0;
-    for (let element of candles)
-        if (element === tallest)
+
+    for (let element of candles){
+        if (element === max){
             count++;
-    
-    return{
-        tallest,
-        count
-    } 
-    
+        }
+    }
+    // for (let i = 0; i < candles.length; i++) {
+    //     if (candles[i] === max) {
+    //         count++;
+    //     }
+    // }
+
+    return count;
 }
 
 //HackerRank:
