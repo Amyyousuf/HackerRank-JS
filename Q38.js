@@ -6,7 +6,7 @@ function permutationEquation(p) {
     for (let x = 1; x <= p.length; x++){
         let y = p.indexOf(x) + 1;
         let z = p.indexOf(y) + 1;
-        result.push(z);
+        result.push(x);
     }
     return result;
 }
