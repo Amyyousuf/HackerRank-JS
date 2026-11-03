@@ -17,3 +17,4 @@ function findDigits(n) {
 
 console.log(findDigits(12));
 console.log(findDigits(1012));
+console.log(findDigits(4020));
