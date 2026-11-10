@@ -8,3 +8,4 @@ function stringConstruction(s) {
     return count;
 }
 console.log(stringConstruction("abab"));
+console.log(stringConstruction("aaaaaa"));
